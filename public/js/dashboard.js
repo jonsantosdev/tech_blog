@@ -18,15 +18,15 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id-update')) {
       const id = event.target.getAttribute('data-id-update');
   
-      const response = await fetch(`/api/blogs/${id}`, {
-        method: 'PUT',
-      });
+      // const response = await fetch(`/api/blogs/${id}`, {
+      //   method: 'PUT',
+      // });
   
-      if (response.ok) {
-        document.location.replace('/dashboard');
-      } else {
-        alert('Failed to update blog');
-      }
+      // if (response.ok) {
+        document.location.replace(`/update/${id}`);
+      // } else {
+      //   alert('Failed to update blog');
+      // }
     }
   };
 
